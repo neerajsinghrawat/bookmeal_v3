@@ -68,7 +68,7 @@
                                 <div class="menu-item menu-list-item">
                                     <div class="row align-items-center">
                                         <div class="col-sm-6 mb-2 mb-sm-0">
-                                            <h6 class="mb-0"><a href="{{ URL::to('product/'.$food['slug']) }}">{{ ucwords($food['name']) }}</a></h6>
+                                            <h6 class="mb-0"><a href="#">{{ ucwords($food['name']) }}</a></h6>
                                             <span class="text-muted text-sm">
                                             <?php  $product_items = getProductitems($food['id']); ?>
                                             <?php 
@@ -92,7 +92,11 @@
                                             <span class="text-md mr-4"><span class="text-muted">from</span> <?php echo getSiteCurrencyType(); ?><span data-product-base-price>{{ $food['price'] }}</span></span>
                                             
                                             <!-- <button class="btn btn-outline-secondary btn-sm addToCart" product_id="{{ $food['id'] }}"><span>Add to cart</span></button> -->
+                                            @if (Auth::guest())
+                                            <a href="{{ route('login') }}" class="btn btn-outline-secondary"><span>Add to cart</span></a>
+                                            @else
                                             <a href="#productModal" data-toggle="modal" class="btn btn-outline-secondary productDetail" product_id="{{$food['id']}}"><span>Add to cart</span></a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
