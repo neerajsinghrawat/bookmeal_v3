@@ -85,7 +85,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-       // print_r($data);die;
+       //echo '<pre>';print_r($data);die;
         $pass = substr(number_format(time() * rand(),0,'',''),0,6);
         $user =  User::create([
             'username' => $data['first_name'].$data['last_name'],
@@ -100,7 +100,8 @@ class RegisterController extends Controller
 
 
             'group_id' => 1,
-            'activated' => !config('app.send_activation_email')  // if we do not send the activation email, then set this flag to 1 right away
+            'activated' => 1
+            //'activated' => !config('app.send_activation_email')  // if we do not send the activation email, then set this flag to 1 right away
         ]);
 
         //$this->sendmsg($data['phone'],$pass);
@@ -150,7 +151,7 @@ class RegisterController extends Controller
         // process the activation email for the user
         $daaa = $this->queueActivationKeyNotification($user);
         
-        echo '<pre>';print_r($daaa);die;
+        //echo '<pre>';print_r($daaa);die;
         // we do not want to login the new user
         return redirect('/login')
             ->with('message', 'We sent you an activation code. Please check your email.')

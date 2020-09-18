@@ -44,6 +44,7 @@
                                                 </span>
                                             @endif
                                             </div>
+                                            <a class="float-right" href="{{ url('/forgot-password') }}">Forgot Password?</a>
                                 </div>
                                 <button class="utility-box-btn btn btn-secondary btn-block btn-lg" type="submit">SIGN IN</button>
                             </form>

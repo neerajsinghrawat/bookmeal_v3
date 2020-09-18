@@ -101,11 +101,11 @@
                                             @endif
                                             </div>
 
-                                            <div class="form-group">
+                                            <!-- <div class="form-group">
                                                 <div class="links">
                                                     <label><input type="checkbox" class="checkbox-inline"/> By signing up I agree with <a href="#">terms & conditions.</a> </label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                 </div>
                                 <button class="utility-box-btn btn btn-secondary btn-block btn-lg" type="submit">SIGN UP</button>
                             </form>
