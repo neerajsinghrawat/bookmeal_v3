@@ -56,7 +56,7 @@
                           //echo '<pre>';print_r($keyarr);die; ?>
                         <div id="{{ (isset($keyarr[2]))?$keyarr[2]:'' }}" class="menu-category">
                             <div class="menu-category-title">
-                                <div class="bg-image"><img src="<?php echo(isset($keyarr[1]))?asset('image/category/400X330/'.$keyarr[1]):'none';  ?>" alt="category"></div>
+                                <div class="bg-image"><img src="<?php echo(isset($keyarr[1]))?asset('image/category/400x330/'.$keyarr[1]):'none';  ?>" alt="category"></div>
                                 <h2 class="title">{{ (isset($keyarr[0]))?$keyarr[0]:'' }}</h2>
                             </div>
                             <div class="menu-category-content">
